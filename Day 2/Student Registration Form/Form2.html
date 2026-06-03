@@ -1,0 +1,144 @@
+
+                          <!-- //Form with pop up // -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+        }
+
+        .form-container {
+            width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #e6f7ff;
+            border: 2px solid #4da6ff;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #003366;
+        }
+
+        .center-button {
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        input[type="date"],
+        textarea {
+            width: 95%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4da6ff;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0066cc;
+        }
+    </style>
+     
+      <script>
+        function showpopup() {
+          let studentName = document.getElementsByName("firstname").value;
+            alert("Welcome " + studentName );
+        }
+          function registrationForm () {
+              alert("Registration Successful! ");
+              return true;
+          }
+            
+      </script>
+
+</head> 
+<body>
+
+    <div class="form-container">
+
+        <h2>Student Registration Form</h2>
+
+        <form name="studentForm" onsubmit="return registrationForm ()">
+
+            Roll No.:
+            <input type="text" name="rollno" required>
+            <br><br>
+
+            Student Name:
+            <input type="text" name="firstname" placeholder="First Name" id="firstname" required>
+            <br><br>
+
+            <input type="text" name="lastname" placeholder="Last Name" required>
+            <br><br>
+
+            Father's Name:
+            <input type="text" name="fathername" required>
+            <br><br>
+
+            Date of Birth:
+            <input type="date" name="dob" required>
+            <br><br>
+
+            Mobile No.:
+            <input type="tel" name="mobile" required>
+            <br><br>
+
+            Email ID (Optional) :
+            <input type="email" name="email">
+            <br><br>
+
+            Password:
+            <input type="password" name="password" required>
+            <br><br>
+
+            Gender:
+            <input type="radio" name="gender" value="male" required> Male
+            <input type="radio" name="gender" value="female" required> Female
+            <br><br>
+
+            Course:
+            <input type="radio" name="course" value="CSE" required> CSE
+            <input type="radio" name="course" value="IT" required> IT
+            <input type="radio" name="course" value="ECE" required> ECE
+            <input type="radio" name="course" value="CIVIL" required> CIVIL
+            <input type="radio" name="course" value="MECH" required> MECH
+            <br><br>
+
+            Student Photo:
+            <input type="file" name="photo" >
+            <br><br>
+
+            City:
+            <input type="text" name="city" required>
+            <br><br>
+
+            Address:
+            <textarea name="address" rows="4" required></textarea>
+            <br><br>
+
+            <div class="center-button">
+                <input type="submit" value="Register">
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
